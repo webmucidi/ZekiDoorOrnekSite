@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            height: 1800px;
+            grid-template-rows: 80px 2fr 3fr 1fr 100px;
+            grid-template-columns: repeat(5,1fr);
+            grid-gap: 10px;
+        }
+        #container > div{
+            background-color: rgb(216, 126, 126);
+        }
+        .header , .slider , .footer{
+            grid-column: 1/6;
+        }
+        .article{
+            grid-column: 1/4;
+        }
+        .gallery{
+            grid-column: 4/6;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="header">Header alanı</div>
+        <div class="slider">Slider alanı</div>
+        <div class="article">Article alanı</div>
+        <div class="gallery">Galeri alanı</div>
+        <div class="eleman1">eleman 5</div>
+        <div class="eleman2">eleman 6</div>
+        <div class="eleman3">eleman 7</div>
+        <div class="eleman4">eleman 8</div>
+        <div class="eleman5">eleman 9</div>
+        <div class="footer">Footer alanı</div>
+    </div>
+</body>
+</html>
