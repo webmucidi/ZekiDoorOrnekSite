@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZekiDoor Örnek Site Layout</title>
+    <style>
+        #kapsayici{
+            width: 100%;
+            height: auto;
+            min-width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: 200px 500px 500px 1fr 100px;
+        }
+        #kapsayici > div{
+            border: thin solid black;
+        }
+        .header{
+            grid-column: 1/6;
+        }
+        .slider{
+            grid-column: 1/6;
+        }
+        .article{
+            grid-column: 1/4;
+        }
+        .gallery{
+            grid-column: 4/6;
+        }
+        .footer{
+            grid-column: 1/6;
+        }
+    </style>
+</head>
+<body>
+    <div id="kapsayici">
+        <div class="header">HEADER ALANI</div>
+        <div class="slider">SLIDER ALANI</div>
+        <div class="article">ARTICLE ALANI</div>
+        <div class="gallery">GALLERY ALANI</div>
+        <div class="box">KUTU 1<br>KUTU 1<br>KUTU 1<br>KUTU 1<br>KUTU 1<br>KUTU 1<br></div>
+        <div class="box">KUTU 2</div>
+        <div class="box">KUTU 3</div>
+        <div class="box">KUTU 4</div>
+        <div class="box">KUTU 5</div>
+        <div class="footer">FOOTER ALANI</div>
+    </div>
+</body>
+</html>

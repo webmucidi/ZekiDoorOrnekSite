@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurumsal Kimliğimiz</title>
+    <link rel="stylesheet" href="styles/stilIcerik.css">
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        } 
+    </script>
+</head>
+<body>
+     
+    <div id="container">
+        <div class="header">
+            <ul class="ustMenu">
+                <li><a href="index.html" class="anasayfa">anasayfa</a></li>
+                <li><a href="kurumsal.html">kurumsal</a></li>
+                <li><a href="#">ürünler</a></li>
+                <li><a href="#">İLETİŞİM</a></li>
+            </ul>
+        </div>
+        <div class="slider">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="icerikResimleri/slyat1-01.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+                </div>
+            
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="icerikResimleri/slayt2.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+                </div>
+            
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="icerikResimleri/slayt2.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div> 
+        </div>
+        <div class="article">
+            <h5>Kalite Yönetim Sistemi ve Standartları</h5>
+            <h1>ISO 9000 ve TSE 12655</h1>
+            <p>Tüm işletme düzeyinde her işlem Müşteri Memnuniyetini doğrultusunda kalite koşulu gözetilerek yapılmaktadır. Çelik Kapılarımız; deneyimli kadromuzla ISO 9000 Kalite Yönetim Sistemini esas alarak TSE 12655 Çelik Kapı Standardına uygun üretilmektedir.</p>
+            <p>Kalitemiz Memnun ve Mutlu Müşteridir. Zekidoor, her gün yenilenerek, yeni ihtiyaçlara cevap vermeye odaklı bir anlayışla çalışmaktadır. Her zaman daha iyi, daha güzel, daha güvenli ve daha kaliteli üretimi hedeflemektedir.</p>
+            <h5>Teknoloji ve Ar-GE Yönetimi</h5>
+            <p>Kapılara uygulanabilen parmak izi, göz iris taraması, uzaktan kumanda, kamera ve Proxy kartlı giriş sistemleri gibi teknolojik gelişmeler yakinen takip edilmekte ve uygulanmaktadır.</p>
+            <p>Uzun zamandan beri bu konudaki deneyimi ve kaliteli üretimiyle Zekidoor; Özgün tasarımı, titiz işçiliği ve güvenliği estetiğe dönüştüren, Müşteri Memnuniyetini en üst seviyede tutmayı temel ilke olarak benimseyen bir anlayışla üretimini sürdürmektedir.</p>
+            <a href="#" class="buton">HAKKIMIZDA</a>
+        </div>
+        <div class="gallery">
+            <img src="icerikResimleri/galeri_01.jpg" alt="">
+            <img src="icerikResimleri/galeri_02.jpg" alt="">
+            <img src="icerikResimleri/galeri_03.jpg" alt="">
+            <img src="icerikResimleri/galeri_04.jpg" alt="">
+        </div>
+        
+        <div class="footer">
+            <ul class="sosyalMedya">
+                <li><a href="www.facebook.com" class="facebook"><i class="fab fa-facebook-f fa-lg"></i></a></li>
+                <li><a href="wwww.twitter.com" class="twitter"><i class="fab fa-twitter fa-lg"></i></a></li>
+                <li><a href="www.instagram.com" class="instagram"><i class="fab fa-instagram fa-lg"></i></a></li>
+                <li><a href="www.youtube.com" class="youtube"><i class="fab fa-youtube fa-lg"></i></a></li>
+                
+            </ul>
+            <h3>2020-2021 Web Tasarımı ve Programlama <a href="#" class="bilisim">@11-I Bilişim</a></h3>
+
+        </div>
+    </div>
+</body>
+</html>
