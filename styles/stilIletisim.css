@@ -12,7 +12,8 @@
     "content"
     "footer"
     ;
-    height: 1500px;
+    
+    height: auto;
     grid-template-rows: 120px 1fr 100px;
     grid-template-columns: repeat(1,1fr);
     grid-gap: 10px;
@@ -103,8 +104,8 @@
 #content{
     grid-area: content;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 2fr 1fr ;
+    grid-template-columns: 1.3fr 1fr 1.3fr;
+    grid-template-rows: auto 1.3fr 1fr ;
     grid-gap: 10px;
     justify-content: center;
 }
@@ -112,19 +113,74 @@
 .iletisimBasliklar{
     grid-column: 1/4;
     grid-row: 1/2;
-    max-width: 60vw;
+    font-family: 'Yusei Magic', sans-serif;
     margin-left: auto;
     margin-right: auto;
-    background-color: red;
+    text-align: center;
     
 }
 
+.iletisimBasliklar h5{
+    font-size: 24px;
+    color: rgb(105, 7, 7);
+    margin-bottom: 16px;
+    margin-top: 32px;
+}
+.iletisimBasliklar h3{
+    font-size: 48px;
+    color: red;
+}
+
 .iletisimBox{
-    background-color: rgb(0, 255, 34);
+    margin-bottom: 50px;
     grid-row: 2/3;
-    max-width: 20vw;
+    text-align: center;
+    padding: 50px 20px 30px 20px;
     
-    
+}
+.iletisimBox h4{
+    font-size: 28px;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.iletisimBox a{
+    color: rgb(105, 7, 7);
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: block;
+
+}
+.iletisimBox i{
+    color: rgb(105, 7, 7);
+    margin: 10px;
+}
+.iletisimBox p{
+    margin: 20px 10px 20px 10px;
+}
+.iletisimBox h6{
+    margin: 20px 10px 20px 10px;
+}
+.telefonlar{
+    list-style: none;
+    margin-top: 20px;
+}
+
+#content > div:nth-child(2){
+    margin-left: 10vw;
+}
+#content > div:nth-child(4){
+    margin-right: 10vw;
+}
+#content > div:nth-child(3){
+    border: thin solid rgb(247, 243, 243);
+    background-color: white;
+    box-shadow:
+      10px 0px 25px rgb(245, 241, 241),
+      0px 10px 25px rgb(245, 241, 241),
+     -10px 0px 25px rgb(245, 241, 241),
+     0px -10px 25px rgb(245, 241, 241)
+     ;
 }
 
 .konum{
