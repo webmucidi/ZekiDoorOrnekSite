@@ -1,0 +1,150 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: rgb(87, 83, 83);
+
+}
+#container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer"
+    ;
+    
+    height: auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    
+    grid-gap: 10px;
+    margin: 1vw;
+}
+.header{
+    grid-area: header;
+    background: url(/images/logo.png) no-repeat left center / 20% , url(/images/bayrak.gif) no-repeat right center / 15% 100%;
+    background-color: #e8eeef;
+    box-shadow: 0px 5px 5px rgb(223, 216, 216);
+    min-height: 120px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* Menü kapsayıcı özellikleri-hizalama,konumlandırma vs.*/
+.ustMenu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+
+    list-style: none;
+    
+    flex: 0 0 50%;
+    max-width: 600px;
+
+}
+/*Menü elemanlarının özellikleri- genişlik,ara boşluklar vs. */
+.ustMenu li{
+    flex: 1 1 15%;
+
+    margin: 0 2px 0 2px;
+}
+/* Link bloklarının/butonların görsel özellikleri- renk,font vs. */
+.ustMenu li > a{
+    display: block;
+    font-size: 1em;
+    line-height: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(177, 15, 15);
+    font-weight: bolder;
+    font-family: 'Langar', cursive;
+
+}
+.ustMenu li > a.anasayfa{
+    background-color: white;
+}
+/* Link üzerine mouse ile gelindiğinde oluşacak görsel efekt */
+.ustMenu li > a:hover{
+    background-color: #fff;
+    transition: 2s;
+}
+
+.footer{
+    grid-area: footer;
+    background: #878888 url(../images/logo.png) no-repeat center center/20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: flex-end;
+
+    min-height: 150px;
+    padding: 10px;
+    
+}
+
+.footer .sosyalMedya{
+    flex: 1 0 50%;
+    max-width: 700px;
+    display: flex;
+    flex-wrap: row;
+    list-style: none;
+    justify-content: center;
+ 
+}
+
+.sosyalMedya > li{
+    flex: 0 1;
+    margin: 1rem;
+}
+
+.footer > h3{
+
+    flex: 1 0 50%;
+    max-width: 550px;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 0.8em;
+    margin: 1em;
+
+
+}
+.footer a.bilisim{
+    color: red;
+
+}
+
+#content{
+    grid-area: content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#content > div{
+    flex:  1 1 20%;
+    min-width: 250px;
+    max-width: 25%;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kutu > img{
+    flex: 1;
+}
